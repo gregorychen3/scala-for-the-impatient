@@ -1,4 +1,4 @@
-# Ch1 Exercises
+# Ch1 Exercise Solutions
 1. The below methods can be applied:  
     ```scala
     scala> 3                 
