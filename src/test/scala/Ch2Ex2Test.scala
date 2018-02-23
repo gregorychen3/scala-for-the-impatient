@@ -31,4 +31,19 @@ class Ch2Ex1Test extends FunSuite {
     val i: Double = 1
     assert(Ch2Helpers.getSignum(i) == 1)
   }
+
+  test("Countdown from 0 should be 0") {
+    val n = 0
+    assert(Ch2Helpers.countdown(n) == "0")
+  }
+
+  test("Countdown from 1 should be 10") {
+    val n = 1
+    assert(Ch2Helpers.countdown(n) == "10")
+  }
+
+  test("Countdown from 2 should be 210") {
+    val n = 2
+    assert(Ch2Helpers.countdown(n) == "210")
+  }
 }
