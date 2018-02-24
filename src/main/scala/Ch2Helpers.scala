@@ -9,4 +9,10 @@ object Ch2Helpers {
     for (i <- n to 0 by -1) ret += i
     ret
   }
+
+  def getProductOfUnicodes(str: String) = {
+    var ret: Long = 1
+    for(c <- str) ret *= c.toInt
+    ret
+  }
 }

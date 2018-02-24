@@ -46,4 +46,9 @@ class Ch2Ex1Test extends FunSuite {
     val n = 2
     assert(Ch2Helpers.countdown(n) == "210")
   }
+
+  test("The product of chars in Unicode of Hello should be 9415087488L") {
+    val myStr = "Hello"
+    assert(Ch2Helpers.getProductOfUnicodes(myStr) == 9415087488L)
+  }
 }
