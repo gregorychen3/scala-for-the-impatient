@@ -1,3 +1,5 @@
+import java.time.LocalDate
+
 object Ch2Helpers {
   def getSignum(i: Double) =
     if (i < 0) -1
@@ -32,4 +34,10 @@ object Ch2Helpers {
     else if (n % 2 != 0 && n > 0) x * myPow(x, n - 1)
     else if (n == 0) 1
     else 1 / myPow(x, -n)
+
+  implicit class DateInterpolator(val sc: StringContext) extends AnyVal {
+    def date(args: Any*): LocalDate = LocalDate.of(args(0).toString.toInt,
+                                                   args(1).toString.toInt,
+                                                   args(2).toString.toInt)
+  }
 }

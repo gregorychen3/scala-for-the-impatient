@@ -1,3 +1,5 @@
+import java.time.LocalDate
+
 import org.scalatest._
 import Ch2Helpers._
 
@@ -105,5 +107,11 @@ class Ch2Ex10Test extends FunSuite {
 
   test("2 to the power of -2 should be .25") {
     assert(Ch2Helpers.myPow(2, -2) == .25)
+  }
+}
+
+class Ch2Ex11Test extends FunSuite {
+  test("DateInterpolator should create date 2012-01-22") {
+    assert(date"${2012}-${1}-${22}" == LocalDate.of(2012, 1, 22))
   }
 }
