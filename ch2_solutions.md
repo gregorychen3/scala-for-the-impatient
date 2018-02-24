@@ -48,5 +48,6 @@
 8. Refer to code in `src/` for solution and tests.
 9. Refer to code in `src/` for solution and tests.
 10. Refer to code in `src/` for solution and tests.
-11. Refer to code in `src/` for solution and tests.
+11. Refer to code in `src/` for solution and tests.  
+   TODO: add error handling and throw exceptions
 
