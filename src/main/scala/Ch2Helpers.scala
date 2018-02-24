@@ -15,4 +15,6 @@ object Ch2Helpers {
     for(c <- str) ret *= c.toInt
     ret
   }
+
+  def getProductOfUnicodesNoLoop(str: String) = str.foldLeft(1L)(_ * _.toLong)
 }
