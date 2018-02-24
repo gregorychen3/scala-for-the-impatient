@@ -26,4 +26,10 @@ object Ch2Helpers {
     if (s.isEmpty) i
     else productRecursiveHelper(s.drop(1), i * s(0).toLong)
   }
+
+  def myPow(x: Int, n: Int): Double =
+    if (n % 2 == 0 && n > 0) myPow(x, n / 2) * myPow(x, n / 2)
+    else if (n % 2 != 0 && n > 0) x * myPow(x, n - 1)
+    else if (n == 0) 1
+    else 1 / myPow(x, -n)
 }

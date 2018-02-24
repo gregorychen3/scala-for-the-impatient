@@ -77,3 +77,33 @@ class Ch2Ex9Test extends FunSuite {
     assert(Ch2Helpers.productRecursive(myStr) == 9415087488L)
   }
 }
+
+class Ch2Ex10Test extends FunSuite {
+  test("2 to the power of 2 should be 4") {
+    assert(Ch2Helpers.myPow(2, 2) == 4)
+  }
+
+  test("2 to the power of 1 should be 2") {
+    assert(Ch2Helpers.myPow(2, 1) == 2)
+  }
+
+  test("2 to the power of 3 should be 8") {
+    assert(Ch2Helpers.myPow(2, 3) == 8)
+  }
+
+  test("2 to the power of 0 should be 1") {
+    assert(Ch2Helpers.myPow(2, 0) == 1)
+  }
+
+  test("2 to the power of -1 should be .5") {
+    assert(Ch2Helpers.myPow(2, -1) == .5)
+  }
+
+  test("2 to the power of -3 should be .125") {
+    assert(Ch2Helpers.myPow(2, -3) == .125)
+  }
+
+  test("2 to the power of -2 should be .25") {
+    assert(Ch2Helpers.myPow(2, -2) == .25)
+  }
+}
