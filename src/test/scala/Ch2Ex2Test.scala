@@ -63,3 +63,17 @@ class Ch2Ex7Test extends FunSuite {
     assert(Ch2Helpers.getProductOfUnicodesNoLoop(myStr) == 9415087488L)
   }
 }
+
+class Ch2Ex8Test extends FunSuite {
+  test("The product of chars in Unicode of Hello should be 9415087488L") {
+    val myStr = "Hello"
+    assert(Ch2Helpers.product(myStr) == 9415087488L)
+  }
+}
+
+class Ch2Ex9Test extends FunSuite {
+  test("The product of chars in Unicode of Hello should be 9415087488L") {
+    val myStr = "Hello"
+    assert(Ch2Helpers.productRecursive(myStr) == 9415087488L)
+  }
+}

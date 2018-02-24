@@ -17,4 +17,13 @@ object Ch2Helpers {
   }
 
   def getProductOfUnicodesNoLoop(str: String) = str.foldLeft(1L)(_ * _.toLong)
+
+  def product(s: String) = getProductOfUnicodesNoLoop(s)
+
+  def productRecursive(s: String) = productRecursiveHelper(s, 1L)
+
+  def productRecursiveHelper(s: String, i: Long): Long = {
+    if (s.isEmpty) i
+    else productRecursiveHelper(s.drop(1), i * s(0).toLong)
+  }
 }
