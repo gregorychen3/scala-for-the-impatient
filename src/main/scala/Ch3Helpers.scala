@@ -9,7 +9,7 @@ object Ch3Helpers {
     ret
   }
 
-  def swapAdjacentElems(a: Array[Int]) = {
+  def swapAdjacentElemsInPlace(a: Array[Int]) = {
     for (i <- a.indices by 2) if (i + 1 < a.length) swapHelper(a, i, i + 1)
     a
   }
