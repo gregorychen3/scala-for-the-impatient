@@ -40,6 +40,11 @@ class Ch3Ex2Test extends FunSuite {
     assert(Ch3Helpers.swapInPlace(a).toSeq == Array(2, 1, 4, 3, 5).toSeq)
   }
 
+  test("Swapping adjacent elements of [1, 2, 3, 4] in place should be [2, 1, 4, 3]") {
+    val a = Array(1, 2, 3, 4)
+    assert(Ch3Helpers.swapInPlace(a).toSeq == Array(2, 1, 4, 3).toSeq)
+  }
+
   test("Swapping adjacent elements of [] in place should be []") {
     val a = Array[Int](0)
     assert(Ch3Helpers.swapInPlace(a).toSeq == Array(0).toSeq)
