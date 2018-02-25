@@ -19,4 +19,11 @@ object Ch3Helpers {
     a(i) = a(j)
     a(j) = temp
   }
+
+  def swap(a: Array[Int]) = {
+    for(i <- a.indices) yield
+      if (i % 2 == 0 && i + 1 < a.length) a(i + 1)
+      else if (i % 2 != 0) a(i - 1)
+      else a(i)
+  }
 }
