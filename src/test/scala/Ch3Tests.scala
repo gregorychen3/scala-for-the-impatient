@@ -37,16 +37,16 @@ class Ch3Ex1Test extends FunSuite {
 class Ch3Ex2Test extends FunSuite {
   test("Swapping adjacent elements of [1, 2, 3, 4, 5] in place should be [2, 1, 4, 3, 5]") {
     val a = Array(1, 2, 3, 4, 5)
-    assert(Ch3Helpers.swapAdjacentElemsInPlace(a).toSeq == Array(2, 1, 4, 3, 5).toSeq)
+    assert(Ch3Helpers.swapInPlace(a).toSeq == Array(2, 1, 4, 3, 5).toSeq)
   }
 
   test("Swapping adjacent elements of [] in place should be []") {
     val a = Array[Int](0)
-    assert(Ch3Helpers.swapAdjacentElemsInPlace(a).toSeq == Array(0).toSeq)
+    assert(Ch3Helpers.swapInPlace(a).toSeq == Array(0).toSeq)
   }
 
   test("Swapping adjacent elements of [2] in place should be [2]") {
     val a = Array(2)
-    assert(Ch3Helpers.swapAdjacentElemsInPlace(a).toSeq == Array(2).toSeq)
+    assert(Ch3Helpers.swapInPlace(a).toSeq == Array(2).toSeq)
   }
 }
