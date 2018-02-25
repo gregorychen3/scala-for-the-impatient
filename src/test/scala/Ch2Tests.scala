@@ -1,6 +1,5 @@
-import java.time.LocalDate
-
 import org.scalatest._
+import java.time.LocalDate
 import Ch2Helpers._
 
 class Ch2Ex1Test extends FunSuite {
