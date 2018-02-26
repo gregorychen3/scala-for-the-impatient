@@ -1,4 +1,5 @@
 import org.scalatest._
+import collection.mutable.ArrayBuffer
 
 class Ch3Ex1Test extends FunSuite {
   test("getArrayOfRandomInt should get an array of 0 random ints in range [0, 1)") {
@@ -114,7 +115,6 @@ class Ch3Ex4Test extends FunSuite {
 }
 
 class Ch3Ex5Test extends FunSuite {
-
   test("Average of [0.0] should be 0.0") {
     assert(Ch3Helpers.average(Array(0.0)) == 0.0)
   }
@@ -125,5 +125,47 @@ class Ch3Ex5Test extends FunSuite {
 
   test("Average of [0.0, 1.1] should be 0.55") {
     assert(Ch3Helpers.average(Array(0.0, 1.1)) == 0.55)
+  }
+}
+
+class Ch3Ex6Test extends FunSuite {
+  test("Sorting the Array [] should yield []") {
+    assert(Ch3Helpers.reverseSort(Array[Int]()).toSeq == Array[Int]().toSeq)
+  }
+
+  test("Sorting the Array [1] should yield [1]") {
+    assert(Ch3Helpers.reverseSort(Array(1)).toSeq == Array(1).toSeq)
+  }
+
+  test("Sorting the Array [1, 2] should yield [2, 1]") {
+    assert(Ch3Helpers.reverseSort(Array(1, 2)).toSeq == Array(2, 1).toSeq)
+  }
+
+  test("Sorting the Array [2, 1] should yield [2, 1]") {
+    assert(Ch3Helpers.reverseSort(Array(2, 1)).toSeq == Array(2, 1).toSeq)
+  }
+
+  test("Sorting the Array [5, 3, 7, 5, 1, 2, 1] should yield [2, 1]") {
+    assert(Ch3Helpers.reverseSort(Array(5, 3, 7, 5, 1, 2, 1)).toSeq == Array(7, 5, 5, 3, 2, 1, 1).toSeq)
+  }
+
+  test("Sorting the ArrayBuffer [] should yield []") {
+    assert(Ch3Helpers.reverseSort(ArrayBuffer[Int]()).toSeq == ArrayBuffer[Int]().toSeq)
+  }
+
+  test("Sorting the ArrayBuffer [1] should yield [1]") {
+    assert(Ch3Helpers.reverseSort(ArrayBuffer(1)).toSeq == ArrayBuffer(1).toSeq)
+  }
+
+  test("Sorting the ArrayBuffer [1, 2] should yield [2, 1]") {
+    assert(Ch3Helpers.reverseSort(ArrayBuffer(1, 2)).toSeq == ArrayBuffer(2, 1).toSeq)
+  }
+
+  test("Sorting the ArrayBuffer [2, 1] should yield [2, 1]") {
+    assert(Ch3Helpers.reverseSort(ArrayBuffer(2, 1)).toSeq == ArrayBuffer(2, 1).toSeq)
+  }
+
+  test("Sorting the ArrayBuffer [5, 3, 7, 5, 1, 2, 1] should yield [2, 1]") {
+    assert(Ch3Helpers.reverseSort(ArrayBuffer(5, 3, 7, 5, 1, 2, 1)).toSeq == ArrayBuffer(7, 5, 5, 3, 2, 1, 1).toSeq)
   }
 }

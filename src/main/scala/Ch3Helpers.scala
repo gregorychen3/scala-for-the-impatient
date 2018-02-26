@@ -32,4 +32,6 @@ object Ch3Helpers {
   def getPartitionedArray(a: Array[Int]) = a.filter(_ > 0) ++ a.filter(_ <= 0)
 
   def average(a: Array[Double]) = a.sum / a.length
+
+  def reverseSort(a: Seq[Int]) = a.sortWith(_ > _)
 }
