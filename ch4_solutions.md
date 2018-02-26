@@ -1,0 +1,3 @@
+# Ch4 Exercise Solutions
+1. Refer to `src/main/scala/Ch4Helpers` for solutions and `src/test/scala/Ch4Tests` for tests.
+
