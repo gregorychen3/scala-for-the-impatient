@@ -77,3 +77,38 @@ class Ch3Ex3Test extends FunSuite {
     assert(Ch3Helpers.swap(a).toSeq == Array(2).toSeq)
   }
 }
+
+class Ch3Ex4Test extends FunSuite {
+
+  test("Partitioning [1] should yield [1]") {
+    assert(Ch3Helpers.getPartitionedArray(Array(1)).toSeq == Array(1).toSeq)
+  }
+
+  test("Partitioning [1, 2] should yield [1, 2]") {
+    assert(Ch3Helpers.getPartitionedArray(Array(1, 2)).toSeq == Array(1, 2).toSeq)
+  }
+
+  test("Partitioning [0] should yield [0]") {
+    assert(Ch3Helpers.getPartitionedArray(Array(0)).toSeq == Array(0).toSeq)
+  }
+
+  test("Partitioning [0, 1] should yield [1, 0]") {
+    assert(Ch3Helpers.getPartitionedArray(Array(0, 1)).toSeq == Array(1, 0).toSeq)
+  }
+
+  test("Partitioning [0, 1, 2] should yield [1, 2, 0]") {
+    assert(Ch3Helpers.getPartitionedArray(Array(0, 1, 2)).toSeq == Array(1, 2, 0).toSeq)
+  }
+
+  test("Partitioning [-1, 0] should yield [-1, 0]") {
+    assert(Ch3Helpers.getPartitionedArray(Array(-1, 0)).toSeq == Array(-1, 0).toSeq)
+  }
+
+  test("Partitioning [-1, 0, 1] should yield [1, -1, 0]") {
+    assert(Ch3Helpers.getPartitionedArray(Array(-1, 0, 1)).toSeq == Array(1, -1, 0).toSeq)
+  }
+
+  test("Partitioning [-1, 0, 1, 2] should yield [1, 2, -1, 0]") {
+    assert(Ch3Helpers.getPartitionedArray(Array(-1, 0, 1, 2)).toSeq == Array(1, 2, -1, 0).toSeq)
+  }
+}
