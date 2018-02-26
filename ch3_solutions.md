@@ -6,4 +6,5 @@
 5. Refer to `src/main/scala/Ch3Helpers` for solutions and `src/test/scala/Ch3Tests` for tests.
 6. Refer to `src/main/scala/Ch3Helpers` for solutions and `src/test/scala/Ch3Tests` for tests.
 7. Refer to `src/main/scala/Ch3Helpers` for solutions and `src/test/scala/Ch3Tests` for tests.
+8. Refer to `src/main/scala/Ch3Helpers` for solutions and `src/test/scala/Ch3Tests` for tests.
 

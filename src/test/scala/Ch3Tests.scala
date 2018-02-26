@@ -195,3 +195,41 @@ class Ch3Ex7Test extends FunSuite {
     assert(Ch3Helpers.getArrayWithoutDups(Array(0, 1, 1)).toSeq == Array(0, 1).toSeq)
   }
 }
+
+class Ch3Ex8Test extends FunSuite {
+  test("Removing all but the first negative num in [] should give []") {
+    var a = ArrayBuffer[Int]()
+    Ch3Helpers.removeAllButFirstNegativeNum(a)
+    assert(a == ArrayBuffer[Int]())
+  }
+
+  test("Removing all but the first negative num in [-1] should give [-1]") {
+    var a = ArrayBuffer(-1)
+    Ch3Helpers.removeAllButFirstNegativeNum(a)
+    assert(a == ArrayBuffer(-1))
+  }
+
+  test("Removing all but the first negative num in [-1, 0] should give [-1, 0]") {
+    var a = ArrayBuffer(-1, 0)
+    Ch3Helpers.removeAllButFirstNegativeNum(a)
+    assert(a == ArrayBuffer(-1, 0))
+  }
+
+  test("Removing all but the first negative num in [0, -1] should give [0, -1]") {
+    var a = ArrayBuffer(0, -1)
+    Ch3Helpers.removeAllButFirstNegativeNum(a)
+    assert(a == ArrayBuffer(0, -1))
+  }
+
+  test("Removing all but the first negative num in [-2, -1, 0] should give [-2, 0]") {
+    var a = ArrayBuffer(-2, -1, 0)
+    Ch3Helpers.removeAllButFirstNegativeNum(a)
+    assert(a == ArrayBuffer(-2, 0))
+  }
+
+  test("Removing all but the first negative num in [-2, 0, -1] should give [-2, 0]") {
+    var a = ArrayBuffer(-2, 0, -1)
+    Ch3Helpers.removeAllButFirstNegativeNum(a)
+    assert(a == ArrayBuffer(-2, 0))
+  }
+}

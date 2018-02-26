@@ -1,3 +1,4 @@
+import scala.collection.mutable.ArrayBuffer
 import util.Random
 
 object Ch3Helpers {
@@ -36,4 +37,13 @@ object Ch3Helpers {
   def reverseSort(a: Seq[Int]) = a.sortWith(_ > _)
 
   def getArrayWithoutDups(a: Array[Any]) = a.distinct
+
+  def removeAllButFirstNegativeNum(a: ArrayBuffer[Int]) = {
+    // Collect positions of negative elements
+    val negativePositions = for (i <- a.indices if a(i) < 0) yield i
+    // Drop the first negative element
+    val positionsToRemove = negativePositions.slice(1, negativePositions.length)
+    // Remove starting from the back
+    for (i <- positionsToRemove.reverse) a.remove(i)
+  }
 }
