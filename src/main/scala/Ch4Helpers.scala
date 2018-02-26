@@ -11,10 +11,19 @@ object Ch4Helpers {
     wordCounts
   }
 
-
   def getWordsAndCountsImmutable(inStr: String) = {
     val in = new java.util.Scanner(inStr)
     var wordCounts = Map[String, Int]().withDefaultValue(0);
+    while (in.hasNext) {
+      val next = in.next
+      wordCounts += (next -> (wordCounts(next) + 1))
+    }
+    wordCounts
+  }
+
+  def getWordsAndCountsImmutableSorted(inStr: String) = {
+    val in = new java.util.Scanner(inStr)
+    var wordCounts = collection.immutable.SortedMap[String, Int]().withDefaultValue(0);
     while (in.hasNext) {
       val next = in.next
       wordCounts += (next -> (wordCounts(next) + 1))

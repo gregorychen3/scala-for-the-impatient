@@ -102,3 +102,59 @@ class Ch4Ex3Test extends FunSuite {
     assert(wordCounts("World") == 1)
   }
 }
+
+class Ch4Ex4Test extends FunSuite {
+  test("Empty string should have no word counts") {
+    val wordCounts = Ch4Helpers.getWordsAndCountsImmutableSorted("")
+    assert(wordCounts.size == 0)
+  }
+
+  test("The String [Hello] should have correct word counts") {
+    val testStr = "Hello"
+    val wordCounts = Ch4Helpers.getWordsAndCountsImmutableSorted(testStr)
+    assert(wordCounts.size == 1)
+    assert(wordCounts("Hello") == 1)
+    assert(wordCounts.keys.toSeq == List("Hello"))
+  }
+
+  test("The String [Hello Hello] should have correct word counts") {
+    val testStr = "Hello Hello"
+    val wordCounts = Ch4Helpers.getWordsAndCountsImmutableSorted(testStr)
+    assert(wordCounts.size == 1)
+    assert(wordCounts("Hello") == 2)
+    assert(wordCounts.keys.toSeq == List("Hello"))
+  }
+
+  test("The String [Hello World] should have correct word counts") {
+    val testStr = "Hello World"
+    val wordCounts = Ch4Helpers.getWordsAndCountsImmutableSorted(testStr)
+    assert(wordCounts.size == 2)
+    assert(wordCounts("Hello") == 1)
+    assert(wordCounts("World") == 1)
+    assert(wordCounts.keys.toSeq == List("Hello", "World"))
+  }
+
+  test("The String [Hello Hello World] should have correct word counts") {
+    val testStr = "Hello Hello World"
+    val wordCounts = Ch4Helpers.getWordsAndCountsImmutableSorted(testStr)
+    assert(wordCounts.size == 2)
+    assert(wordCounts("Hello") == 2)
+    assert(wordCounts("World") == 1)
+    assert(wordCounts.keys.toSeq == List("Hello", "World"))
+  }
+  
+  test("The String [Hello World Hello] should have correct word counts") {
+    val testStr = "Hello World Hello"
+    val wordCounts = Ch4Helpers.getWordsAndCountsImmutableSorted(testStr)
+    assert(wordCounts.size == 2)
+    assert(wordCounts("Hello") == 2)
+    assert(wordCounts("World") == 1)
+    assert(wordCounts.keys.toSeq == List("Hello", "World"))
+  }
+
+  test("The String [d b c a] should have correct iteration order") {
+    val testStr = "d b c a"
+    val wordCounts = Ch4Helpers.getWordsAndCountsImmutableSorted(testStr)
+    assert(wordCounts.keys.toSeq == List("a", "b", "c", "d"))
+  }
+}
