@@ -75,4 +75,10 @@
 	```
 8. Refer to `src/main/scala/Ch4Helpers` for solutions and `src/test/scala/Ch4Tests` for tests.
 9. Refer to `src/main/scala/Ch4Helpers` for solutions and `src/test/scala/Ch4Tests` for tests.
+10. Zipping together two Strings makes tuples out of the chars of each string that are in the same position, like so:
+    ```scala
+    scala> "Hello".zip("World")
+    res0: scala.collection.immutable.IndexedSeq[(Char, Char)] = Vector((H,W), (e,o), (l,r), (l,l), (o,d))
+    ```
+   A possible use case for this might be in preparation for a radix sort on the Strings
 
