@@ -112,3 +112,18 @@ class Ch3Ex4Test extends FunSuite {
     assert(Ch3Helpers.getPartitionedArray(Array(-1, 0, 1, 2)).toSeq == Array(1, 2, -1, 0).toSeq)
   }
 }
+
+class Ch3Ex5Test extends FunSuite {
+
+  test("Average of [0.0] should be 0.0") {
+    assert(Ch3Helpers.average(Array(0.0)) == 0.0)
+  }
+
+  test("Average of [1.1] should be 1.1") {
+    assert(Ch3Helpers.average(Array(1.1)) == 1.1)
+  }
+
+  test("Average of [0.0, 1.1] should be 0.55") {
+    assert(Ch3Helpers.average(Array(0.0, 1.1)) == 0.55)
+  }
+}

@@ -30,4 +30,6 @@ object Ch3Helpers {
   // Returns a new array that contains all positive values of a in their original order, followed by all values that are
   // zero or negative, in their original order.
   def getPartitionedArray(a: Array[Int]) = a.filter(_ > 0) ++ a.filter(_ <= 0)
+
+  def average(a: Array[Double]) = a.sum / a.length
 }
