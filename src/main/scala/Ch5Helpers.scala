@@ -5,3 +5,17 @@ class Counter {
   }
   def current() = value
 }
+
+class BankAccount {
+  private var privateBalance = 0.0
+
+  def balance = privateBalance
+
+  def deposit(amount: Double) = {
+    privateBalance += amount
+  }
+
+  def withdraw(amount: Double) = {
+    privateBalance -= amount
+  }
+}
