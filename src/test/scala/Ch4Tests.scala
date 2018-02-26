@@ -214,3 +214,10 @@ class Ch4Ex5Test extends FunSuite {
     assert(wordCounts.keys.toSeq == List("a", "b", "c", "d"))
   }
 }
+
+class Ch4Ex6Test extends FunSuite {
+  test("LinkedHashMap's iteration order should be the same as insertion order") {
+    assert(Ch4Helpers.getDaysOfWeek().keys.toSeq == Array("Monday", "Tuesday", "Wednesday", "Thursday", "Friday",
+      "Saturday", "Sunday").toSeq)
+  }
+}

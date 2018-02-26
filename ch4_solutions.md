@@ -4,4 +4,5 @@
 3. Refer to `src/main/scala/Ch4Helpers` for solutions and `src/test/scala/Ch4Tests` for tests.
 4. Refer to `src/main/scala/Ch4Helpers` for solutions and `src/test/scala/Ch4Tests` for tests.
 5. Refer to `src/main/scala/Ch4Helpers` for solutions and `src/test/scala/Ch4Tests` for tests.
+6. Refer to `src/main/scala/Ch4Helpers` for solutions and `src/test/scala/Ch4Tests` for tests.
 

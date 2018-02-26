@@ -1,5 +1,6 @@
 import scala.collection.JavaConverters._
 import scala.collection.immutable.SortedMap
+import scala.collection.mutable
 
 object Ch4Helpers {
   def produceDiscount(inMap: Map[String, Double]) = {
@@ -43,4 +44,14 @@ object Ch4Helpers {
     }
     wordCounts
   }
+
+  def getDaysOfWeek() = collection.mutable.LinkedHashMap(
+    "Monday" -> java.util.Calendar.MONDAY,
+    "Tuesday" -> java.util.Calendar.TUESDAY,
+    "Wednesday" -> java.util.Calendar.WEDNESDAY,
+    "Thursday" -> java.util.Calendar.THURSDAY,
+    "Friday" -> java.util.Calendar.FRIDAY,
+    "Saturday" -> java.util.Calendar.SATURDAY,
+    "Sunday" -> java.util.Calendar.SUNDAY
+  )
 }
