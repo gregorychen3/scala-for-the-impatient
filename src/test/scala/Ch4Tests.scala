@@ -239,3 +239,29 @@ class Ch4Ex8Test extends FunSuite {
     assert(Ch4Helpers.getMinMaxPair(Array(1, 0)) == (0 -> 1))
   }
 }
+
+class Ch4Ex9Test extends FunSuite {
+  test("The Array [1, 2, 3, 4, 5] has (0, 0, 5) elements (lt, eq, gt) 0, respectively") {
+    val compareVal = 0
+    val inArray = Array(1, 2, 3, 4, 5)
+    assert(Ch4Helpers.lteqgt(Array(1, 2, 3, 4, 5), 0) == (0, 0, 5))
+  }
+
+  test("The Array [1, 2, 3, 4, 5] has (0, 1, 4) elements (lt, eq, gt) 1, respectively") {
+    val compareVal = 1
+    val inArray = Array(1, 2, 3, 4, 5)
+    assert(Ch4Helpers.lteqgt(inArray, compareVal) == (0, 1, 4))
+  }
+
+  test("The Array [1, 2, 3, 4, 5] has (1, 1, 3) elements (lt, eq, gt) 2, respectively") {
+    val compareVal = 2
+    val inArray = Array(1, 2, 3, 4, 5)
+    assert(Ch4Helpers.lteqgt(inArray, compareVal) == (1, 1, 3))
+  }
+
+  test("The Array [1, 2, 3, 4, 5] has (2, 1, 2) elements (lt, eq, gt) 3, respectively") {
+    val compareVal = 3
+    val inArray = Array(1, 2, 3, 4, 5)
+    assert(Ch4Helpers.lteqgt(inArray, compareVal) == (2, 1, 2))
+  }
+}

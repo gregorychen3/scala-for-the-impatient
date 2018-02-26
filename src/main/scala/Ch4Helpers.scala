@@ -56,4 +56,7 @@ object Ch4Helpers {
   )
 
   def getMinMaxPair(values: Array[Int]) = values.min -> values.max
+
+  def lteqgt(values: Array[Int], v: Int) = (values.filter(_ < v).length, values.filter(_ == v).length,
+    values.filter(_ > v).length)
 }

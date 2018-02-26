@@ -74,4 +74,5 @@
 	sun.cpu.isalist | 
 	```
 8. Refer to `src/main/scala/Ch4Helpers` for solutions and `src/test/scala/Ch4Tests` for tests.
+9. Refer to `src/main/scala/Ch4Helpers` for solutions and `src/test/scala/Ch4Tests` for tests.
 
