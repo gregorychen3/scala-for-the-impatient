@@ -26,3 +26,27 @@ class Ch5Ex2Test extends FunSuite {
     assert(ba.balance == 9)
   }
 }
+
+class Ch5Ex3Test extends FunSuite {
+  test("The Time 12:34 should construct") {
+    val time = new Time(12, 34)
+    assert(time.hours == 12)
+    assert(time.minutes == 34)
+  }
+
+  test("The Time 00:00 should be before 00:01") {
+    assert(new Time(0, 0).before(new Time(0, 1)))
+  }
+
+  test("The Time 12:02 should be before 13:01") {
+    assert(new Time(12, 2).before(new Time(13, 1)))
+  }
+
+  test("The Time 00:01 should not be before 00:00") {
+    assert(!(new Time(0, 1).before(new Time(0, 0))))
+  }
+
+  test("The Time 13:01 should not be before 12:02") {
+    assert(!(new Time(13, 1).before(new Time(12, 2))))
+  }
+}
