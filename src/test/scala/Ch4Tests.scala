@@ -221,3 +221,21 @@ class Ch4Ex6Test extends FunSuite {
       "Saturday", "Sunday").toSeq)
   }
 }
+
+class Ch4Ex8Test extends FunSuite {
+  test("Min and max in the Array [0] should be 0 and 0, respectively") {
+    assert(Ch4Helpers.getMinMaxPair(Array(0)) == (0 -> 0))
+  }
+
+  test("Min and max in the Array [0, 0] should be 0 and 0, respectively") {
+    assert(Ch4Helpers.getMinMaxPair(Array(0, 0)) == (0 -> 0))
+  }
+
+  test("Min and max in the Array [0, 1] should be 0 and 1, respectively") {
+    assert(Ch4Helpers.getMinMaxPair(Array(0, 1)) == (0 -> 1))
+  }
+
+  test("Min and max in the Array [1, 0] should be 0 and 1, respectively") {
+    assert(Ch4Helpers.getMinMaxPair(Array(1, 0)) == (0 -> 1))
+  }
+}

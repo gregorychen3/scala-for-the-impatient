@@ -54,4 +54,6 @@ object Ch4Helpers {
     "Saturday" -> java.util.Calendar.SATURDAY,
     "Sunday" -> java.util.Calendar.SUNDAY
   )
+
+  def getMinMaxPair(values: Array[Int]) = values.min -> values.max
 }
