@@ -169,3 +169,29 @@ class Ch3Ex6Test extends FunSuite {
     assert(Ch3Helpers.reverseSort(ArrayBuffer(5, 3, 7, 5, 1, 2, 1)).toSeq == ArrayBuffer(7, 5, 5, 3, 2, 1, 1).toSeq)
   }
 }
+
+class Ch3Ex7Test extends FunSuite {
+  test("The Array [0] without dups should be [0]") {
+    assert(Ch3Helpers.getArrayWithoutDups(Array(0)).toSeq == Array(0).toSeq)
+  }
+
+  test("The Array [0, 0] without dups should be [0]") {
+    assert(Ch3Helpers.getArrayWithoutDups(Array(0, 0)).toSeq == Array(0).toSeq)
+  }
+
+  test("The Array [0, 0, 0] without dups should be [0]") {
+    assert(Ch3Helpers.getArrayWithoutDups(Array(0, 0, 0)).toSeq == Array(0).toSeq)
+  }
+
+  test("The Array [0, 1] without dups should be [0, 1]") {
+    assert(Ch3Helpers.getArrayWithoutDups(Array(0, 1)).toSeq == Array(0, 1).toSeq)
+  }
+
+  test("The Array [0, 1, 0] without dups should be [0, 1]") {
+    assert(Ch3Helpers.getArrayWithoutDups(Array(0, 1, 0)).toSeq == Array(0, 1).toSeq)
+  }
+
+  test("The Array [0, 1, 1] without dups should be [0, 1]") {
+    assert(Ch3Helpers.getArrayWithoutDups(Array(0, 1, 1)).toSeq == Array(0, 1).toSeq)
+  }
+}

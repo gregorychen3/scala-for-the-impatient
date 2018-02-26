@@ -34,4 +34,6 @@ object Ch3Helpers {
   def average(a: Array[Double]) = a.sum / a.length
 
   def reverseSort(a: Seq[Int]) = a.sortWith(_ > _)
+
+  def getArrayWithoutDups(a: Array[Any]) = a.distinct
 }
