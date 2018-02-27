@@ -45,3 +45,7 @@ class Time2(d_hours: Int, d_minutes: Int) {
 }
 
 class Student(@BeanProperty var name: String) {}
+
+class Person(var age: Int) {
+  age = if (age < 0) 0 else age
+}

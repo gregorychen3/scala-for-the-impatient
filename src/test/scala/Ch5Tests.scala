@@ -104,3 +104,17 @@ class Ch5Ex5Test extends FunSuite {
     assert(student.name == testName2)
   }
 }
+
+class Ch5Ex6Test extends FunSuite {
+  test("Person constructor should construct a Person with age 0 when passed a negative age") {
+    val testAge = -1
+    val person = new Person(testAge)
+    assert(person.age == 0)
+  }
+
+  test("Person constructor should construct a Person requested age when passed a positive age") {
+    val testAge = 1
+    val person = new Person(testAge)
+    assert(person.age == testAge)
+  }
+}

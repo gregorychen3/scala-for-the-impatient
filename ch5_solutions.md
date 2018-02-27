@@ -23,4 +23,5 @@
 	}
 	```
 	While JavaBeans getters and setters can indeed be called from Scala, Scala's getters and setters should be preferred over them.
+6. Refer to `src/main/scala/Ch5Helpers` for solutions and `src/test/scala/Ch5Tests` for tests.
 
