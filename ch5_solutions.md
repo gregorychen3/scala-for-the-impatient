@@ -2,4 +2,5 @@
 1. Refer to `src/main/scala/Ch5Helpers` for solutions and `src/test/scala/Ch5Tests` for tests.
 2. Refer to `src/main/scala/Ch5Helpers` for solutions and `src/test/scala/Ch5Tests` for tests.
 3. Refer to `src/main/scala/Ch5Helpers` for solutions and `src/test/scala/Ch5Tests` for tests.
+4. Refer to `src/main/scala/Ch5Helpers` for solutions and `src/test/scala/Ch5Tests` for tests.
 

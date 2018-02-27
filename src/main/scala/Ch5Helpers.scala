@@ -27,3 +27,18 @@ class Time(val hours: Int, val minutes: Int) {
     else false
   }
 }
+
+class Time2(d_hours: Int, d_minutes: Int) {
+  private val minutesSinceMidnight = d_hours * 60 + d_minutes
+
+  def hours: Int = minutesSinceMidnight / 60
+
+  def minutes: Int = minutesSinceMidnight % 60
+
+  def before(other: Time2): Boolean = {
+    if (hours < other.hours) true
+    else if (hours == other.hours) minutes < other.minutes
+    else false
+  }
+
+}
