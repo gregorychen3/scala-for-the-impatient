@@ -1,3 +1,5 @@
+import scala.beans.BeanProperty
+
 class Counter {
   private var value = 0
   def increment(): Unit = {
@@ -40,5 +42,6 @@ class Time2(d_hours: Int, d_minutes: Int) {
     else if (hours == other.hours) minutes < other.minutes
     else false
   }
-
 }
+
+class Student(@BeanProperty var name: String) {}

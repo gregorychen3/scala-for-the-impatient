@@ -74,3 +74,33 @@ class Ch5Ex4Test extends FunSuite {
     assert(!(new Time2(13, 1).before(new Time2(12, 2))))
   }
 }
+
+class Ch5Ex5Test extends FunSuite {
+  test("Student primary constructor should generate Scala getter for name field") {
+    val testName = "Bob"
+    val student = new Student(testName)
+    assert(student.name == testName)
+  }
+
+  test("Student primary constructor should generate Scala setter for name field") {
+    val testName = "Bob"
+    val testName2 = "Bill"
+    val student = new Student(testName)
+    student.name = testName2
+    assert(student.name == testName2)
+  }
+
+  test("Student primary constructor should generate Java getter for name field") {
+    val testName = "Bob"
+    val student = new Student(testName)
+    assert(student.getName == testName)
+  }
+
+  test("Student primary constructor should generate Java setter for name field") {
+    val testName = "Bob"
+    val testName2 = "Bill"
+    val student = new Student(testName)
+    student.setName(testName2)
+    assert(student.name == testName2)
+  }
+}
