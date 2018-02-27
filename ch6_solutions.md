@@ -12,4 +12,7 @@
 	gchen213@C02VJ01NHTDD:scala-for-the-impatient$ scalac ReverseHelloWorld.scala && scala ReverseHelloWorld hello world
 	 world hello
 	```
+6. Skipped. TODO: complete exercise
+7. Skipped. TODO: complete exercise
+8. Skipped. TODO: complete exercise
 
