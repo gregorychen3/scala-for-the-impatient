@@ -129,3 +129,50 @@ class Ch5Ex7Test extends FunSuite {
     assert(person.lastName == testLastName)
   }
 }
+
+class Ch5Ex8Test extends FunSuite {
+  test("Construct a Car with manufacturer, modelName, modelYear, and licensePlate") {
+    val manufacturer = "Ford"
+    val modelName = "Focus"
+    val modelYear = 2010
+    val licensePlate = "7NKH46T"
+    val car = new Car(manufacturer, modelName, modelYear, licensePlate)
+    assert(car.manufacturer == manufacturer)
+    assert(car.modelName == modelName)
+    assert(car.modelYear == modelYear)
+    assert(car.licensePlate == licensePlate)
+  }
+
+
+  test("Construct a Car with manufacturer, modelName, and modelYear") {
+    val manufacturer = "Ford"
+    val modelName = "Focus"
+    val modelYear = 2010
+    val car = new Car(manufacturer, modelName, modelYear)
+    assert(car.manufacturer == manufacturer)
+    assert(car.modelName == modelName)
+    assert(car.modelYear == modelYear)
+    assert(car.licensePlate == "")
+  }
+
+  test("Construct a Car with manufacturer, modelName, and licensePlate") {
+    val manufacturer = "Ford"
+    val modelName = "Focus"
+    val licensePlate = "7NKH46T"
+    val car = new Car(manufacturer, modelName, licensePlate)
+    assert(car.manufacturer == manufacturer)
+    assert(car.modelName == modelName)
+    assert(car.modelYear == -1)
+    assert(car.licensePlate == licensePlate)
+  }
+
+  test("Construct a Car with manufacturer and modelName") {
+    val manufacturer = "Ford"
+    val modelName = "Focus"
+    val car = new Car(manufacturer, modelName)
+    assert(car.manufacturer == manufacturer)
+    assert(car.modelName == modelName)
+    assert(car.modelYear == -1)
+    assert(car.licensePlate == "")
+  }
+}

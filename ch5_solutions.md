@@ -26,4 +26,6 @@
 6. Refer to `src/main/scala/Ch5Helpers` for solutions and `src/test/scala/Ch5Tests` for tests.
 7. Primary constructor parameter should be a plain parameter since it is only used for construction and should not be available anywhere else.
    Refer to `src/main/scala/Ch5Helpers` for solutions and `src/test/scala/Ch5Tests` for tests.
+8. The primary constructor should take all four args so that the auxiliary constructors need only call the primary constructor with default values for missing optional args.
+   Refer to `src/main/scala/Ch5Helpers` for solutions and `src/test/scala/Ch5Tests` for tests.
 
