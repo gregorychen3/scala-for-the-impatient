@@ -46,6 +46,4 @@ object Ch3Helpers {
     // Remove starting from the back
     for (i <- positionsToRemove.reverse) a.remove(i)
   }
-
-  def getTimeZones() = java.util.TimeZone.getAvailableIDs.filter(_.contains("America/")).map(_.substring(8)).sorted
 }
