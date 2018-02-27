@@ -93,3 +93,13 @@ class Ch6Ex2Test extends FunSuite {
     assert(Conversions.milesToKilometers(miles) == 2.41401)
   }
 }
+
+class Ch6Ex4Test extends FunSuite {
+  test("Construct a Point without using new") {
+    val xVal = 1
+    val yVal = 2
+    val p = Point(xVal, yVal)
+    assert(p.x == xVal)
+    assert(p.y == yVal)
+  }
+}
