@@ -118,3 +118,14 @@ class Ch5Ex6Test extends FunSuite {
     assert(person.age == testAge)
   }
 }
+
+class Ch5Ex7Test extends FunSuite {
+  test("Person2 class should have a generated getter for firstName and lastName properties") {
+    val testFirstName = "John"
+    val testLastName = "Doe"
+    val testFullName = s"$testFirstName $testLastName"
+    val person = new Person2(testFullName)
+    assert(person.firstName == testFirstName)
+    assert(person.lastName == testLastName)
+  }
+}

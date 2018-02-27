@@ -49,3 +49,8 @@ class Student(@BeanProperty var name: String) {}
 class Person(var age: Int) {
   age = if (age < 0) 0 else age
 }
+
+class Person2(name: String) {
+  val firstName = name.split(' ')(0)
+  val lastName = name.split(' ')(1)
+}
