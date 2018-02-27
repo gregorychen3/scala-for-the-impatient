@@ -29,5 +29,6 @@
 8. The primary constructor should take all four args so that the auxiliary constructors need only call the primary constructor with default values for missing optional args.
    Refer to `src/main/scala/Ch5Helpers` for solutions and `src/test/scala/Ch5Tests` for tests.
 9. Point taken that the Java or C++ impl of the previous exercise's Car class would be much longer than the Scala impl. Exercise skipped.
-10. 
+10. Not sure which form I prefer; open to opinions.
+   Refer to `src/main/scala/Ch5Helpers` for solutions and `src/test/scala/Ch5Tests` for tests.
 

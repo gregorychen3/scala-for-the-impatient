@@ -56,7 +56,6 @@ class Person2(name: String) {
 }
 
 class Car(val manufacturer: String, val modelName: String, val modelYear: Int, var licensePlate: String) {
-
   def this(manufacturer: String, modelName: String) {
     this(manufacturer, modelName, -1, "")
   }
@@ -68,4 +67,13 @@ class Car(val manufacturer: String, val modelName: String, val modelYear: Int, v
   def this(manufacturer: String, modelName: String, licensePlate: String) {
     this(manufacturer, modelName, -1, licensePlate)
   }
+}
+
+class Employee(val name: String, var salary: Double) {
+  def this() { this("John Q. Public", 0.0) }
+}
+
+class EmployeeRewrite(inName: String = "John Q. Public", inSalary: Double = 0.0) {
+  val name = inName
+  var salary = inSalary
 }

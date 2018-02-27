@@ -176,3 +176,35 @@ class Ch5Ex8Test extends FunSuite {
     assert(car.licensePlate == "")
   }
 }
+
+class Ch5Ex10Test extends FunSuite {
+  test("Employee constructor with name and salary") {
+    val name = "Bob"
+    val salary = 12.34
+    val emp = new Employee(name, salary)
+    assert(emp.name == name)
+    assert(emp.salary == salary)
+  }
+
+  test("Employee constructor with no args") {
+    val name = "Bob"
+    val emp = new Employee()
+    assert(emp.name == "John Q. Public")
+    assert(emp.salary == 0.0)
+  }
+  
+  test("EmployeeRewrite constructor with name and salary") {
+    val name = "Bob"
+    val salary = 12.34
+    val emp = new EmployeeRewrite(name, salary)
+    assert(emp.name == name)
+    assert(emp.salary == salary)
+  }
+
+  test("EmployeeRewrite constructor with no args") {
+    val name = "Bob"
+    val emp = new EmployeeRewrite()
+    assert(emp.name == "John Q. Public")
+    assert(emp.salary == 0.0)
+  }
+}
