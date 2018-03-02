@@ -48,5 +48,7 @@ gchen213@C02VJ01NHTDD:temp$
 3. Refer to `src/main/scala/Ch7Ex1Random.scala` for solution and `src/test/scala/Ch6Tests` for tests.
 4. Section 7.5 states,
 > A package can contain classes, objects, and traits, but not the definitions of functions or variables. That's an unfortunate limitation of the Java virtual machine. It would make more sense to add utility functions or constants to a package than to some Utils object. Package objects address this limitation.
+5. The method is package private to the package `com`. In general this a useful language feature which achieves the same effect as Java's package private class members. However, in this particular cse it is not very useful, since the package `com` is a top level package.
+
 
 
