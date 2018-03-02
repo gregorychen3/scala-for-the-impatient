@@ -1,4 +1,3 @@
-
 import org.scalatest.FunSuite
 
 class Ch7Ex3Test extends FunSuite {
@@ -25,6 +24,4 @@ class Ch7Ex6Test extends FunSuite {
     Ch7Helpers.copyJava2Scala(jMap, sMap)
     assert(sMap("ONE") == 1)
   }
-
-
 }
