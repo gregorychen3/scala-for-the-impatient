@@ -1,3 +1,5 @@
+package Ch5Helpers
+
 import scala.beans.BeanProperty
 
 class Counter {

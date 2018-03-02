@@ -1,4 +1,5 @@
 import org.scalatest._
+import Ch5Helpers._
 
 class Ch5Ex1Test extends FunSuite {
   test("Counter should not wrap at Int.MaxValue") {
