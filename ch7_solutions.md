@@ -44,4 +44,6 @@ one error found
 gchen213@C02VJ01NHTDD:temp$ scalac Tester2.scala 
 gchen213@C02VJ01NHTDD:temp$ 
 ```
+2. Skipped. Exercise instructions unclear.
+
 
