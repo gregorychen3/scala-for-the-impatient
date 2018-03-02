@@ -1,8 +1,8 @@
-import scala.collection.JavaConverters._
-import scala.collection.immutable.SortedMap
-import scala.collection.mutable
+package object Ch4Helpers {
 
-object Ch4Helpers {
+  import scala.collection.JavaConverters._
+  import scala.collection.immutable.SortedMap
+
   def produceDiscount(inMap: Map[String, Double]) = {
     val DISCOUNT_RATE = 0.1
     for ((k, v) <- inMap) yield (k, v - v * DISCOUNT_RATE)

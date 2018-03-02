@@ -1,7 +1,8 @@
-import scala.collection.mutable.ArrayBuffer
-import util.Random
 
-object Ch3Helpers {
+package object Ch3Helpers {
+
+  import scala.collection.mutable.ArrayBuffer
+  import util.Random
 
   // Returns an array of n random integers between 0 (inclusive) and endExclusive
   def getArrayOfRandomInt(n: Int, endExclusive: Int) = {
@@ -22,7 +23,7 @@ object Ch3Helpers {
   }
 
   def swap(a: Array[Int]) = {
-    for(i <- a.indices) yield
+    for (i <- a.indices) yield
       if (i % 2 == 0 && i + 1 < a.length) a(i + 1)
       else if (i % 2 != 0) a(i - 1)
       else a(i)

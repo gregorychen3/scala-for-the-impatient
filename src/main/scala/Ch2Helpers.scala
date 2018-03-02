@@ -1,6 +1,7 @@
-import java.time.LocalDate
+package object Ch2Helpers {
 
-object Ch2Helpers {
+  import java.time.LocalDate
+
   def getSignum(i: Double) =
     if (i < 0) -1
     else if (i == 0) 0
@@ -14,7 +15,7 @@ object Ch2Helpers {
 
   def getProductOfUnicodes(str: String) = {
     var ret: Long = 1
-    for(c <- str) ret *= c.toInt
+    for (c <- str) ret *= c.toInt
     ret
   }
 
@@ -37,7 +38,8 @@ object Ch2Helpers {
 
   implicit class DateInterpolator(val sc: StringContext) extends AnyVal {
     def date(args: Any*): LocalDate = LocalDate.of(args(0).toString.toInt,
-                                                   args(1).toString.toInt,
-                                                   args(2).toString.toInt)
+      args(1).toString.toInt,
+      args(2).toString.toInt)
   }
+
 }
