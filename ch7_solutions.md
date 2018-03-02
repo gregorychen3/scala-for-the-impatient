@@ -45,5 +45,5 @@ gchen213@C02VJ01NHTDD:temp$ scalac Tester2.scala
 gchen213@C02VJ01NHTDD:temp$ 
 ```
 2. Skipped. Exercise instructions unclear.
-
+3. Refer to `src/main/scala/Ch7Ex1Random.scala` for solution and `src/test/scala/Ch6Tests` for tests.
 
