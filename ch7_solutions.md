@@ -52,4 +52,6 @@ gchen213@C02VJ01NHTDD:temp$
 6. Refer to `src/main/scala/Ch7Helpers.scala` for solution and `src/test/scala/Ch7Tests` for tests.
 7. Refer to `src/main/scala/Ch7Helpers.scala` for solution and `src/test/scala/Ch7Tests` for tests.
 8. Terrible idea as you will be importing the entire Java universe into your namespace. This would be a terrible idea even if it were a Java program, not to mention a Scala one, since you miss the whole point of namespaces if you simply import the whole universe into the namespace.
+9. Skipped. TODO: finish this exercise
+10. Skipped. TODO: finish this exercise
 
