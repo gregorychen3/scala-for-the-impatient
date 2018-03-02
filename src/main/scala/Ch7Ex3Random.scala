@@ -20,5 +20,3 @@ package object Ch7Ex3Random {
 
   def setSeed(seed: Int): Unit = { previous = seed }
 }
-
-package random {}
