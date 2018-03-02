@@ -2,9 +2,11 @@ import scala.beans.BeanProperty
 
 class Counter {
   private var value = 0
+
   def increment(): Unit = {
     if (value < Int.MaxValue) value += 1
   }
+
   def current() = value
 }
 
@@ -70,7 +72,9 @@ class Car(val manufacturer: String, val modelName: String, val modelYear: Int, v
 }
 
 class Employee(val name: String, var salary: Double) {
-  def this() { this("John Q. Public", 0.0) }
+  def this() {
+    this("John Q. Public", 0.0)
+  }
 }
 
 class EmployeeRewrite(inName: String = "John Q. Public", inSalary: Double = 0.0) {

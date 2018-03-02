@@ -6,7 +6,9 @@ class Ch3Ex1Test extends FunSuite {
     val arrayLen = 0;
     val endExclusive = 1;
     assert(Ch3Helpers.getArrayOfRandomInt(arrayLen, endExclusive).foldLeft(true)(
-      (res, next) => { if (next >= 0 && next < endExclusive) res else false }
+      (res, next) => {
+        if (next >= 0 && next < endExclusive) res else false
+      }
     ))
   }
 
@@ -14,7 +16,9 @@ class Ch3Ex1Test extends FunSuite {
     val arrayLen = 1;
     val endExclusive = 1;
     assert(Ch3Helpers.getArrayOfRandomInt(arrayLen, endExclusive).foldLeft(true)(
-      (res, next) => { if (next >= 0 && next < endExclusive) res else false }
+      (res, next) => {
+        if (next >= 0 && next < endExclusive) res else false
+      }
     ))
   }
 
@@ -22,7 +26,9 @@ class Ch3Ex1Test extends FunSuite {
     val arrayLen = 100;
     val endExclusive = 4;
     assert(Ch3Helpers.getArrayOfRandomInt(arrayLen, endExclusive).foldLeft(true)(
-      (res, next) => { if (next >= 0 && next < endExclusive) res else false }
+      (res, next) => {
+        if (next >= 0 && next < endExclusive) res else false
+      }
     ))
   }
 
@@ -30,7 +36,9 @@ class Ch3Ex1Test extends FunSuite {
     val arrayLen = 100;
     val endExclusive = 100;
     assert(Ch3Helpers.getArrayOfRandomInt(arrayLen, endExclusive).foldLeft(true)(
-      (res, next) => { if (next >= 0 && next < endExclusive) res else false }
+      (res, next) => {
+        if (next >= 0 && next < endExclusive) res else false
+      }
     ))
   }
 }

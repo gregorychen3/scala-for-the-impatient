@@ -4,7 +4,7 @@ package object Ch7Ex3Random {
 
   private val b = 1013904223
 
-  private val  n = 32
+  private val n = 32
 
   private var previous: Double = 2.0
 
@@ -18,5 +18,7 @@ package object Ch7Ex3Random {
     previous
   }
 
-  def setSeed(seed: Int): Unit = { previous = seed }
+  def setSeed(seed: Int): Unit = {
+    previous = seed
+  }
 }

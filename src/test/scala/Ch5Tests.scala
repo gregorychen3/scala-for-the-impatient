@@ -192,7 +192,7 @@ class Ch5Ex10Test extends FunSuite {
     assert(emp.name == "John Q. Public")
     assert(emp.salary == 0.0)
   }
-  
+
   test("EmployeeRewrite constructor with name and salary") {
     val name = "Bob"
     val salary = 12.34

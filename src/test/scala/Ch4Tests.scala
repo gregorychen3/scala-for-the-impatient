@@ -5,7 +5,7 @@ class Ch4Ex1Test extends FunSuite {
     val gizmosToPrices = Map("computer" -> 12.12, "phone" -> 123.123)
     val gizmosToDiscountedPrices = Ch4Helpers.produceDiscount(gizmosToPrices)
     assert(gizmosToPrices.keySet == gizmosToDiscountedPrices.keySet)
-    for((k,v) <- gizmosToPrices) {
+    for ((k, v) <- gizmosToPrices) {
       assert(gizmosToDiscountedPrices(k) == v - v * .1)
     }
   }
@@ -142,7 +142,7 @@ class Ch4Ex4Test extends FunSuite {
     assert(wordCounts("World") == 1)
     assert(wordCounts.keys.toSeq == List("Hello", "World"))
   }
-  
+
   test("The String [Hello World Hello] should have correct word counts") {
     val testStr = "Hello World Hello"
     val wordCounts = Ch4Helpers.getWordsAndCountsImmutableSorted(testStr)
