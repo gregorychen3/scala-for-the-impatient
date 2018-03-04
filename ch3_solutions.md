@@ -8,7 +8,7 @@
 7. Refer to `src/main/scala/Ch3Helpers` for solutions and `src/test/scala/Ch3Tests` for tests.
 8. Refer to `src/main/scala/Ch3Helpers` for solutions and `src/test/scala/Ch3Tests` for tests.
 9. Skipped due to dubious educational value.
-10.
+10.  
 ```scala
 scala> def getTimeZones() = java.util.TimeZone.getAvailableIDs.filter(_.contains("America/")).map(_.substring(8)).sorted
 getTimeZones: ()Array[String]
