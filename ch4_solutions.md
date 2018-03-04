@@ -79,6 +79,6 @@
     ```scala
     scala> "Hello".zip("World")
     res0: scala.collection.immutable.IndexedSeq[(Char, Char)] = Vector((H,W), (e,o), (l,r), (l,l), (o,d))
-    ```
-   A possible use case for this might be in preparation for a radix sort on the Strings
+    ```  
+    A possible use case for this might be in preparation for a radix sort on the Strings
 
