@@ -145,3 +145,23 @@ class Ch8Ex4Test extends FunSuite {
     assert(bundle.price == Price1 + Price2)
   }
 }
+
+class Ch8Ex5Test extends FunSuite {
+  test("Contruct a Point") {
+    val X = 1
+    val Y = 2
+    val point = new Point(X, Y)
+    assert(point.x == X)
+    assert(point.y == Y)
+  }
+
+  test("Construct a LabeledPoint") {
+    val X = 1
+    val Y = 2
+    val Label = "Foo"
+    val labeledPoint = new LabeledPoint(Label, X, Y)
+    assert(labeledPoint.label == Label)
+    assert(labeledPoint.x == X)
+    assert(labeledPoint.y == Y)
+  }
+}
