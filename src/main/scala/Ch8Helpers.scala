@@ -51,3 +51,23 @@ class SavingsAccount(initialBalance: Double, val monthlyInterestRate: Double) ex
 object SavingsAccount {
   val TransactionsPerMonth = 3
 }
+
+abstract class Item() {
+  def price: Double
+
+  def description: String
+}
+
+class SimpleItem(override val price: Double, override val description: String) extends Item() {}
+
+class Bundle extends Item() {
+  private val items = new collection.mutable.ArrayBuffer[Item]()
+
+  def price = items.foldLeft(0.0)(_ + _.price)
+
+  def description = items.map(_.description).mkString("[", ", ", "]")
+
+  def add(i: Item): Unit = {
+    items += i
+  }
+}
