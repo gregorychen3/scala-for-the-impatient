@@ -165,3 +165,24 @@ class Ch8Ex5Test extends FunSuite {
     assert(labeledPoint.y == Y)
   }
 }
+
+class Ch8Ex6Test extends FunSuite {
+  test("Rectangle constructor") {
+    val topLeft = new Ch8.Point(2, 4)
+    val topRight = new Ch8.Point(4, 4)
+    val bottomLeft = new Ch8.Point(2, 2)
+    val bottomRight = new Ch8.Point(4, 2)
+    val r = new Rectangle(topLeft = topLeft, topRight = topRight, bottomLeft = bottomLeft, bottomRight = bottomRight)
+    assert(r.centerPoint.x == 3)
+    assert(r.centerPoint.y == 3)
+  }
+  
+  test("Circle constructor") {
+    val center = new Ch8.Point(2, 2)
+    val radius = 3
+    val r = new Circle(center, radius)
+    assert(r.centerPoint.x == 2)
+    assert(r.centerPoint.y == 2)
+    assert(r.radius == 3)
+  }
+}

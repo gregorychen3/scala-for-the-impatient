@@ -75,3 +75,13 @@ class Bundle extends Item() {
 class Point(val x: Double, val y: Double) {}
 
 class LabeledPoint(val label: String, x: Double, y: Double) extends Point(x, y) {}
+
+abstract class Shape {
+  def centerPoint: Point
+}
+
+class Rectangle(val topRight: Point, val topLeft: Point, val bottomLeft: Point, val bottomRight: Point) extends Shape {
+  override def centerPoint: Point = new Point((topLeft.x + topRight.x) / 2.0, (topLeft.y + bottomLeft.y) / 2)
+}
+
+class Circle(override val centerPoint: Point, val radius: Double) extends Shape {}
