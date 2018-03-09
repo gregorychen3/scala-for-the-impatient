@@ -85,3 +85,6 @@ class Rectangle(val topRight: Point, val topLeft: Point, val bottomLeft: Point, 
 }
 
 class Circle(override val centerPoint: Point, val radius: Double) extends Shape {}
+
+class Square(corner: Point = new Point(0,0), width: Int = 0)
+  extends java.awt.Rectangle(corner.x.toInt, corner.y.toInt, width, width) {}

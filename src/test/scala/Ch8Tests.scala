@@ -176,7 +176,7 @@ class Ch8Ex6Test extends FunSuite {
     assert(r.centerPoint.x == 3)
     assert(r.centerPoint.y == 3)
   }
-  
+
   test("Circle constructor") {
     val center = new Ch8.Point(2, 2)
     val radius = 3
@@ -184,5 +184,35 @@ class Ch8Ex6Test extends FunSuite {
     assert(r.centerPoint.x == 2)
     assert(r.centerPoint.y == 2)
     assert(r.radius == 3)
+  }
+}
+
+class Ch8Ex7Test extends FunSuite {
+  test("Square constructor with no args") {
+    val s = new Square()
+    assert(s.x == 0)
+    assert(s.y == 0)
+    assert(s.height == 0)
+    assert(s.width == 0)
+  }
+
+  test("Square constructor with width") {
+    val width = 3
+    val s = new Square(width = width)
+    assert(s.x == 0)
+    assert(s.y == 0)
+    assert(s.height == width)
+    assert(s.width == width)
+  }
+
+  test("Square constructor with corner and width") {
+    val cornerX = 1
+    val cornerY = 2
+    val width = 3
+    val s = new Square(corner = new Ch8.Point(cornerX, cornerY), width = width)
+    assert(s.x == cornerX)
+    assert(s.y == cornerY)
+    assert(s.height == width)
+    assert(s.width == width)
   }
 }
